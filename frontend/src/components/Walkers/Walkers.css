@@ -1,0 +1,22 @@
+.title{
+	margin-left:40px;
+	padding: 0px;
+	background-color: purple;
+}
+
+.contact-info{
+	padding:0px;
+}
+
+.sub-header{
+	background-color: red;
+	display: inline;
+	margin-left: 40px;
+}
+
+.icon{ 
+	background-color: blue;
+	display: inline;
+	float:right;
+	margin-right:40px;
+}
