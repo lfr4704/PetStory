@@ -7,7 +7,7 @@ const FeaturedWalks = ({ featured_walks }) => {
   const featuredWalksHtml = featured_walks.map(featuredWalk => (
     <div>
     	<div>
-	      <p>{featuredWalk.thumbnail_url}</p>
+	      <img src={featuredWalk.thumbnail_url}/>
       </div>
       <div>
       	<p>date: {featuredWalk.date}</p>

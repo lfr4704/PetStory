@@ -28,7 +28,8 @@ class Walkers extends React.Component { // eslint-disable-line react/prefer-stat
           <h5 className="icon">Edit</h5>
         </div>
         <div>
-          <p>{`${walker.first_name} ${walker.last_name}`} </p> //ticks are used for concantination
+          <img src={walker.image_url} />
+          <p>{`${walker.first_name} ${walker.last_name}`} </p>
           <p>{walker.phone}</p>
           <p>{walker.email}</p>
           <p>{walker.location}</p>

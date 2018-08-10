@@ -1,44 +1,37 @@
 import React, { Component } from 'react';
+import { 
+  BrowserRouter,
+  Route,
+} from 'react-router-dom';
 import './App.css';
 import Walkers from './components/Walkers/Walkers';
+import Walk from './components/Walk/Walk';
+import Owners from './components/Owners/Owners';
+import WalkerScreen from './screens/WalkerScreen'
+import WalkScreen from './screens/WalkScreen';
+import OwnersScreen from './screens/OwnersScreen';
+import OwnersFeedScreen from './screens/OwnersFeedScreen';
+
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      walker: null,
-    };
-  }
-
-  componentDidMount() {
-    this.fetchWalker();
-  }
-
-  fetchWalker() {
-    const walkerId = 1;
-    const url = `http://localhost:8000/api/walkers/${walkerId}/`;
-
-    fetch(url) // eslint-disable-line no-undef
-      .then(response => response.json())
-      .then((walkerJson) => {
-      // console.log(walkerJson)
-        this.setState({
-          walker: walkerJson,
-        });
-      })
-
-      .catch(error => console.log('fetch error', error));
-  }
 
   render() {
-    const { walker } = this.state; //for simplicity and readability define constant 
+     
     return (
-      <div>
-        <Walkers walker={walker} />
-      </div>
+      <BrowserRouter>
+        <div>
+          <p>hello</p>
+          <Route exact path="/walkers/:walkerId" component={WalkerScreen}/>
+          <Route exact path="/walk/:walkId" component={WalkScreen}/>
+          <Route exact path="/owner/:ownerId" component={OwnersScreen}/>
+          <Route exact path="/ownerFeed/:ownerFeedId" component={OwnersFeedScreen}/>
+        </div>
+       
+      </BrowserRouter>
 
     );
   }
 }
 
 export default App;
+

@@ -13,7 +13,7 @@ const Pets = ({ pets }) => {
   const petsHtml = pets.map(pets => (
     <div>
     	<div>
-	      <p>{pets.image_url}</p>
+	      <img src={pets.image_url}/>
         <p>{pets.name}</p>
 	      <p>Age: {`${pets.age}, ${pets.gender}`}</p>  
 	      <p>Weight(lbs): {pets.weight}</p> 
