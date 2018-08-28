@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import './Walkers.css';
 import Services from '../Services/Services';
 import Pets from '../Pets/Pets';
-import About from '../About/About';
 import FeaturedWalks from '../FeaturedWalks/FeaturedWalks';
 
 class Walkers extends React.Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
     walker: PropTypes.object,
   };
-
 
   render() {
     const { walker } = this.props;
@@ -20,30 +18,51 @@ class Walkers extends React.Component { // eslint-disable-line react/prefer-stat
 
     return (
       <main>
-        <header className="title">
-          <h1>My Profile</h1>
-        </header>
-        <div className="contact-info">
-          <h2 className="sub-header">Contact Information</h2>
+        <div>
+          <h1 className="header">Owner Details</h1>
           <h5 className="icon">Edit</h5>
         </div>
-        <div>
-          <img src={walker.image_url} />
-          <p>{`${walker.first_name} ${walker.last_name}`} </p>
-          <p>{walker.phone}</p>
-          <p>{walker.email}</p>
-          <p>{walker.location}</p>
+
+        <div className="container-1">
+          <div className="box-1">
+            <img className="profile-picture" src={walker.image_url} />
+          </div>
+          <div className="box-2">
+            <p>{`${walker.first_name} ${walker.last_name}`} </p>
+            <p>{walker.phone}</p>
+            <p>{walker.email}</p>
+          </div>
         </div>
-        <div>
-          <h2>About</h2>
-          <p>{walker.about}</p>
+
+        <div className="container-2">
+          <div className="container-2-box">
+            <h2>Location</h2>
+              <p>{walker.location}</p>
+          </div>
+          <div className="container-2-box">
+            <h2>About</h2>
+              <p>{walker.about}</p>
+          </div>
+          <div className="container-2-box">
+            <Services services={walker.services} />
+          </div>
         </div>
-        <div>
-          <Services services={walker.services} />
+
+        <div className="container-3">
+          <div>
+            <FeaturedWalks featuredWalks={walker.featured_walks} />
+          </div>
         </div>
-        <FeaturedWalks featured_walks={walker.featured_walks} />
+
         <div>
           <Pets pets={walker.pets}/>
+        </div>
+
+        <div className="container-4">
+          <div>
+            <h2>Calendar</h2>
+            <p>{walker.calendar}</p>
+          </div>
         </div>
       </main>
     );

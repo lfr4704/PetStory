@@ -33,15 +33,7 @@
 	flex-direction: column;
 }
 
-.container-3{
-	margin-left: 40px;
-}
-
-.container-4{
-	margin-left: 40px;
-}
-
-.container-1 div, .container-2 div, .container-4 div{
+.container-1 div, .container-2 div{
 	/* border: 1px #ccc solid; */
 	padding: 10px;
 }
@@ -50,14 +42,6 @@
 	margin-left: 40px;
 }
 
-.box-2{
-/* to be styled later? */
-}
-
 .container-2-box{
 	margin-left: 40px;
-}
-
-h2 {
-	text-decoration: underline;
 }

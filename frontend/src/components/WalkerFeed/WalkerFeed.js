@@ -1,17 +1,29 @@
 import React from 'react';
+import './WalkerFeed.css';
 import PropTypes from 'prop-types';
+
 
 
 // stateless component
 const WalkerFeed = ({ walkerFeed }) => {
   const walkerFeedHtml = (
     <div>
-    	<div>
-	      <img src={walkerFeed.image_url}/>
-        <p>{walkerFeed.first_name}</p>
+      <div className="header">
+        <h1>PetStory</h1>
       </div>
-
+      <div className="container-1">
+      	<div className="box-1">
+  	      <img className="profile-picture"src={walkerFeed.image_url}/>
+        </div>
+        <div className="box-2">
+          <p>{walkerFeed.first_name}</p>
+        </div>
+        <div className="box-3">
+          <h6 className="icon">Filter</h6>
+        </div>
+      </div>
     </div>
+
   );
   return (
     <div>

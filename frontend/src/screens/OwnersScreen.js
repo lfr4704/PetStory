@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { 
+import {
   BrowserRouter,
   Route,
 } from 'react-router-dom';
@@ -16,7 +16,7 @@ class OwnersScreen extends Component {
 
   componentDidMount() {
     const {match} = this.props;
-    this.ownerId = match.params.ownerId // params is for router functionality 
+    this.ownerId = match.params.ownerId // params is for router functionality
     this.fetchOwner();
   }
 
@@ -34,20 +34,12 @@ class OwnersScreen extends Component {
 
       .catch(error => console.log('fetch error', error));
   }
-
-
-  render() {  
+  render() {
     const { owner } = this.state;
     return (
-
         <div>
           <Owners owner={owner} />
-          
-          
         </div>
-
-       
-
     );
   }
 }

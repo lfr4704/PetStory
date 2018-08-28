@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { 
+import {
   BrowserRouter,
   Route,
 } from 'react-router-dom';
@@ -15,7 +15,7 @@ class OwnersFeedScreen extends Component {
 
   componentDidMount() {
     const {match} = this.props;
-    this.ownerFeedId = match.params.ownerFeedId // params is for router functionality 
+    this.ownerFeedId = match.params.ownerFeedId // params is for router functionality
     this.fetchOwnerFeed();
   }
 
@@ -28,24 +28,19 @@ class OwnersFeedScreen extends Component {
       console.log(ownerFeedJson)
         this.setState({
           ownerFeed: ownerFeedJson,
-         
+
         });
       })
 
       .catch(error => console.log('fetch error', error));
   }
 
-
-  render() {  
+  render() {
    const { ownerFeed } = this.state;
     return (
-
         <div>
           <OwnerFeed ownerFeed={ownerFeed} />
         </div>
-
-       
-
     );
   }
 }

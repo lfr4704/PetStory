@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { 
+import {
   BrowserRouter,
   Route,
 } from 'react-router-dom';
@@ -16,7 +16,7 @@ class WalkerScreen extends Component {
 
   componentDidMount() {
     const {match} = this.props;
-    this.walkerId = match.params.walkerId // params is for router functionality 
+    this.walkerId = match.params.walkerId // params is for router functionality
     this.fetchWalker();
   }
 
@@ -36,18 +36,14 @@ class WalkerScreen extends Component {
   }
 
 
-  render() {  
+  render() {
     const { walker } = this.state;
     return (
-
         <div>
           <Walkers walker={walker} />
         </div>
-       
-
     );
   }
 }
 
 export default WalkerScreen;
-

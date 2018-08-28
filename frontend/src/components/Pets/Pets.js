@@ -1,4 +1,5 @@
 import React from 'react';
+import './Pets.css';
 import PropTypes from 'prop-types';
 
 //this was not working in this component
@@ -12,26 +13,40 @@ import PropTypes from 'prop-types';
 const Pets = ({ pets }) => {
   const petsHtml = pets.map(pets => (
     <div>
-    	<div>
-	      <img src={pets.image_url}/>
-        <p>{pets.name}</p>
-	      <p>Age: {`${pets.age}, ${pets.gender}`}</p>  
-	      <p>Weight(lbs): {pets.weight}</p> 
+      <div>
+        <h1 className="header">Pets</h1>
+        <h5 className="icon">Edit</h5>
       </div>
-      <div>
-      	<p>About: {pets.about}</p>
-      </div> 
-      <div>
-	      <h2>Instructions</h2>
-	      <p>{pets.instructions}</p>
-	      <h2>Behavior</h2>
-	      <p>{pets.behavior}</p>
+
+    	<div className="container-1">
+        <div className="box-1">
+	       <img className="profile-picture" src={pets.image_url}/>
+        </div>
+        <div className="box-2">
+          <p>{pets.name}</p>
+  	      <p>Age: {`${pets.age}, ${pets.gender}`}</p>
+  	      <p>Weight(lbs): {pets.weight}</p>
+        </div>
+      </div>
+
+      <div className="container-2">
+        <div className="container-2-box">
+          <h2>About</h2>
+        	<p>{pets.about}</p>
+        </div>
+        <div className="container-2-box">
+  	      <h2>Instructions</h2>
+  	      <p>{pets.instructions}</p>
+        </div>
+        <div className="container-2-box">
+  	      <h2>Behavior</h2>
+  	      <p>{pets.behavior}</p>
+        </div>
       </div>
     </div>
   ));
   return (
     <div>
-      <h2>Pets</h2>
       {petsHtml}
     </div>
   );

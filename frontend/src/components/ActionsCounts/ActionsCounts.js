@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-//stateless component 
+//stateless component
 const ActionsCounts = ({ action_counts }) => {
-	const actionsCountHtml = (
+	return (
 		<div>
 			<ul>
 				<li>Poop:{action_counts.poop}</li>
@@ -13,12 +13,6 @@ const ActionsCounts = ({ action_counts }) => {
 				<li>Medicine:{action_counts.medicine}</li>
 				<li>Pictures:{action_counts.picture}</li>
 			</ul>
-		</div>
-	);
-
-	return (
-		<div>
-			{actionsCountHtml}
 		</div>
 	);
 };

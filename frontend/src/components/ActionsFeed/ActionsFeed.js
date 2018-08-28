@@ -1,22 +1,29 @@
 import React from 'react';
+import './ActionsFeed.css';
 import PropTypes from 'prop-types';
-import PetUrl from '../PetUrl/PetUrl';
+import PetImages from '../PetImages/PetImages';
 
 
 // stateless component
 const ActionsFeed = ({ actionsFeed }) => {
   const ActionsFeedHtml = actionsFeed.map(action => (
-    <div>
-    	<div>
-        <PetUrl pets={action.pets}/>
-        <p>{action.time}</p>
-        <p>{action.type}</p>
-        <img src={action.image_url}/>
+    <main>
+      <div className="container-1">
+      	<div className="">
+          <PetImages pets={action.pets}/>
+        </div>
+        <div className="box-2">
+          <p>{action.time}</p>
+          <p>{action.type}</p>
+        </div>
+        <div className="box-3">
+          <img src={action.image_url}/> //this is a placeholder for the icon image
+        </div>
         <div>
           <p>{action.notes}</p>
         </div>
       </div>
-    </div>
+    </main>
   ));
   return (
     <div>

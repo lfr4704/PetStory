@@ -1,12 +1,15 @@
 import React from 'react';
+import './PetImages.css';
 import PropTypes from 'prop-types';
 
 
 // stateless component
-const PetUrl = ({ pets }) => {
+const PetImages = ({ pets }) => {
   const petUrlHtml = pets.map(pets => (//this is a for each loop for every object in stored in the object values
-    <div>
-      <img src={pets.image_url}/>
+    <div className="pet-feed-container">
+      <div className="pet-container-box">
+        <img className="pet-feed-picture" src={pets.image_url}/>
+      </div>
     </div>
   ));
   return (
@@ -16,8 +19,8 @@ const PetUrl = ({ pets }) => {
   );
 };
 
-PetUrl.propTypes = {
+PetImages.propTypes = {
   pets: PropTypes.array,
 };
 
-export default PetUrl;
+export default PetImages;

@@ -9,13 +9,11 @@ class OwnerFeed extends React.Component { // eslint-disable-line react/prefer-st
     ownerFeed: PropTypes.object,
   };
 
-
   render() {
     const { ownerFeed } = this.props;
     if (!ownerFeed) {
       return null;
     }
-
     return (
       <main>
         <div>
