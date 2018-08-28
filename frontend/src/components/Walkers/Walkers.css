@@ -1,5 +1,5 @@
 
-.header{
+.walker-header{
 	display: inline;
 	margin-left: 40px;
 }
@@ -11,7 +11,7 @@
 }
 
 /* profile picture edit */
-.profile-picture {
+.walker-profile-picture {
 	width: 150px;
 	height: 150px;
 	background-color: blue;
@@ -23,35 +23,35 @@
 	position: relative;
 }
 
-.container-1{
+.walker-container-1{
 	display: flex;
 	align-items: center;
 }
 
-.container-2{
+.walker-container-2{
 	display:flex;
 	flex-direction: column;
 }
 
-.container-3{
+.walker-container-3{
 	margin-left: 40px;
 }
 
-.container-4{
+.walker-container-4{
 	margin-left: 40px;
 }
 
-.container-1 div, .container-2 div, .container-4 div{
+.walker-container-1 div, .walker-container-2 div, .walker-container-4 div{
 	/* border: 1px #ccc solid; */
 	padding: 10px;
 }
 
-.box-1{
+.walker-box-1{
 	margin-left: 40px;
 }
 
-.box-2{
-/* to be styled later? */
+.walker-box-2{
+	margin-left: 10px;
 }
 
 .container-2-box{

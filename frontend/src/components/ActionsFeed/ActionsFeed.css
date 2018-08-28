@@ -1,25 +1,8 @@
 
-.header h1{
-  border: 1px #ccc solid;
-  margin-bottom: 0px;
-}
-
-.header {
-  text-align: center;
-  font-size: 1.5em;
-}
-
-.icon{
-	display: inline;
-	float:right;
-	margin-right:40px;
-}
-
 /* profile picture edit */
 .pet-profile-picture {
 	width: 60px;
 	height: 60px;
-	background-color: blue;
 	border-radius: 50%;
 	-webkit-border-radius: 50%; /* vendor prefixed properties */
 	-moz-border-radius: 50%;
@@ -35,7 +18,7 @@
 }
 
 .container-1 div{
-	border: 1px #ccc solid;
+	/* border: 1px #ccc solid; */
 	padding: 0px;
 }
 
@@ -45,11 +28,16 @@
 }
 
 .box-2{
-  flex: 12;
+  flex: 1;
 /* to be styled later? */
 }
 
 .box-3{
+  flex: 1;
+/* to be styled later? */
+}
+
+.box-4{
   flex: 12;
 /* to be styled later? */
 }

@@ -1,5 +1,5 @@
 
-.header{
+.pets-header{
 	display: inline;
 	margin-left: 40px;
 }
@@ -11,7 +11,7 @@
 }
 
 /* profile picture edit */
-.profile-picture {
+.pets-profile-picture {
 	width: 150px;
 	height: 150px;
 	background-color: blue;
@@ -23,22 +23,22 @@
 	position: relative;
 }
 
-.container-1{
+.pets-container-1{
 	display: flex;
 	align-items: center;
 }
 
-.container-2{
+.pets-container-2{
 	display:flex;
 	flex-direction: column;
 }
 
-.container-1 div, .container-2 div{
+.pets-container-1 div, .pets-container-2 div{
 	/* border: 1px #ccc solid; */
 	padding: 10px;
 }
 
-.box-1{
+.pets-box-1{
 	margin-left: 40px;
 }
 

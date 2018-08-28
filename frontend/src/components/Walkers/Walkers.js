@@ -19,22 +19,22 @@ class Walkers extends React.Component { // eslint-disable-line react/prefer-stat
     return (
       <main>
         <div>
-          <h1 className="header">Owner Details</h1>
+          <h1 className="walker-header">Owner Details</h1>
           <h5 className="icon">Edit</h5>
         </div>
 
-        <div className="container-1">
-          <div className="box-1">
-            <img className="profile-picture" src={walker.image_url} />
+        <div className="walker-container-1">
+          <div className="walker-box-1">
+            <img className="walker-profile-picture" src={walker.image_url} />
           </div>
-          <div className="box-2">
+          <div className="walker-box-2">
             <p>{`${walker.first_name} ${walker.last_name}`} </p>
             <p>{walker.phone}</p>
             <p>{walker.email}</p>
           </div>
         </div>
 
-        <div className="container-2">
+        <div className="walker-container-2">
           <div className="container-2-box">
             <h2>Location</h2>
               <p>{walker.location}</p>
@@ -48,7 +48,7 @@ class Walkers extends React.Component { // eslint-disable-line react/prefer-stat
           </div>
         </div>
 
-        <div className="container-3">
+        <div className="walker-container-3">
           <div>
             <FeaturedWalks featuredWalks={walker.featured_walks} />
           </div>
@@ -58,7 +58,7 @@ class Walkers extends React.Component { // eslint-disable-line react/prefer-stat
           <Pets pets={walker.pets}/>
         </div>
 
-        <div className="container-4">
+        <div className="walker-container-4">
           <div>
             <h2>Calendar</h2>
             <p>{walker.calendar}</p>

@@ -11,14 +11,14 @@ const WalkerFeed = ({ walkerFeed }) => {
       <div className="header">
         <h1>PetStory</h1>
       </div>
-      <div className="container-1">
-      	<div className="box-1">
+      <div className="walker-container-1">
+      	<div className="walker-box-1">
   	      <img className="profile-picture"src={walkerFeed.image_url}/>
         </div>
-        <div className="box-2">
+        <div className="walker-box-2">
           <p>{walkerFeed.first_name}</p>
         </div>
-        <div className="box-3">
+        <div className="walker-box-3">
           <h6 className="icon">Filter</h6>
         </div>
       </div>

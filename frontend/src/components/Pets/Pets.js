@@ -14,22 +14,22 @@ const Pets = ({ pets }) => {
   const petsHtml = pets.map(pets => (
     <div>
       <div>
-        <h1 className="header">Pets</h1>
+        <h1 className="pets-header">Pets</h1>
         <h5 className="icon">Edit</h5>
       </div>
 
-    	<div className="container-1">
-        <div className="box-1">
-	       <img className="profile-picture" src={pets.image_url}/>
+    	<div className="pets-container-1">
+        <div className="pets-box-1">
+	       <img className="pets-profile-picture" src={pets.image_url}/>
         </div>
-        <div className="box-2">
+        <div className="pets-box-2">
           <p>{pets.name}</p>
   	      <p>Age: {`${pets.age}, ${pets.gender}`}</p>
   	      <p>Weight(lbs): {pets.weight}</p>
         </div>
       </div>
 
-      <div className="container-2">
+      <div className="pets-container-2">
         <div className="container-2-box">
           <h2>About</h2>
         	<p>{pets.about}</p>

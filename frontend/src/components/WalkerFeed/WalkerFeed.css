@@ -1,6 +1,6 @@
 
 .header h1{
-  border: 1px #ccc solid;
+  /* border: 1px #ccc solid; */
   margin-bottom: 0px;
 }
 
@@ -17,8 +17,8 @@
 
 /* profile picture edit */
 .profile-picture {
-	width: 35px;
-	height: 35px;
+	width: 50px;
+	height: 50px;
 	background-color: blue;
 	border-radius: 50%;
 	-webkit-border-radius: 50%; /* vendor prefixed properties */
@@ -28,28 +28,28 @@
 	position: relative;
 }
 
-.container-1{
+.walker-container-1{
 	display: flex;
 	align-items: center;
-
 }
 
-.container-1 div{
-	border: 1px #ccc solid;
+.walker-container-1 div{
+	/* border: 1px #ccc solid; */
 	padding: 0px;
 }
 
-.box-1{
+.walker-box-1{
   flex: 1;
 	margin-left: 40px;
 }
 
-.box-2{
+.walker-box-2{
   flex: 12;
 /* to be styled later? */
 }
 
-.box-3{
+.walker-box-3{
   flex: 12;
+  height: 50px;
 /* to be styled later? */
 }

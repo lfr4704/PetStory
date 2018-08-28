@@ -19,6 +19,7 @@ class OwnerFeed extends React.Component { // eslint-disable-line react/prefer-st
         <div>
           <WalkerFeed walkerFeed={ownerFeed.walker} />
         </div>
+        <hr />
         <div>
           <ActionsFeed actionsFeed={ownerFeed.actions} />
         </div>

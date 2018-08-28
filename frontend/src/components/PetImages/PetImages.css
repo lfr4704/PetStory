@@ -1,20 +1,4 @@
 
-.header h1{
-  border: 1px #ccc solid;
-  margin-bottom: 0px;
-}
-
-.header {
-  text-align: center;
-  font-size: 1.5em;
-}
-
-.icon{
-	display: inline;
-	float:right;
-	margin-right:40px;
-}
-
 /* profile picture edit */
 .pet-feed-picture {
 	width: 50px;
@@ -35,7 +19,7 @@
 }
 
 .pet-feed-container div{
-	border: 1px #ccc solid;
+	/* border: 1px #ccc solid; */
 	padding: 0 10px 10px 0;
 }
 

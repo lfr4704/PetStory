@@ -17,12 +17,13 @@ const ActionsFeed = ({ actionsFeed }) => {
           <p>{action.type}</p>
         </div>
         <div className="box-3">
-          <img src={action.image_url}/> //this is a placeholder for the icon image
+          <img src={action.image_url}/> //icon placeholder
         </div>
-        <div>
+        <div className="box-4">
           <p>{action.notes}</p>
         </div>
       </div>
+      <hr />
     </main>
   ));
   return (
