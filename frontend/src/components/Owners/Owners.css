@@ -1,0 +1,51 @@
+.owner-header{
+  margin-left: 40px;
+}
+
+.owner-sub-header{
+	margin-left: 0px;
+  padding: 0px;
+}
+
+.owner-icon{
+	display: inline;
+	float:right;
+	margin-right:40px;
+}
+
+/* profile picture edit */
+/* .walker-profile-picture {
+	width: 150px;
+	height: 150px;
+	background-color: blue;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	display: inline-block;
+	position: relative;
+} */
+
+.owner-container-1{
+	display: flex;
+	align-items:center;
+}
+
+.owner-container-1 div, .owner-container-2 div{
+	border: 1px #ccc solid;
+	padding: 10px;
+}
+
+.owner-box-1{
+  flex: 6;
+	margin-left: 40px;
+}
+
+.owner-box-2{
+  flex: 6;
+	padding: 0px;
+}
+
+.container-box{
+	margin-left: 40px;
+}

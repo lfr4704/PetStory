@@ -19,7 +19,7 @@ class Walkers extends React.Component { // eslint-disable-line react/prefer-stat
     return (
       <main>
         <div>
-          <h1 className="walker-header">Owner Details</h1>
+          <h1 className="walker-header">Walker Details</h1>
           <h5 className="icon">Edit</h5>
         </div>
 

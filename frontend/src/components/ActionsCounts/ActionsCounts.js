@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './ActionsCounts.css'
 
 
 //stateless component
 const ActionsCounts = ({ action_counts }) => {
 	return (
-		<div>
+		<div className="">
 			<ul>
 				<li>Poop:{action_counts.poop}</li>
 				<li>Food:{action_counts.food}</li>

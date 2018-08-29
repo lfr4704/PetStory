@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Walk.css';
 import PetImages from '../PetImages/PetImages';
 import ActionsCounts from '../ActionsCounts/ActionsCounts';
 import Location from '../Location/Location';
@@ -17,17 +18,34 @@ class Walk extends React.Component { // eslint-disable-line react/prefer-statele
 		}
 		return(
 			<main>
-		    <header className="title">
-		      <h1>Walks</h1>
-		    </header>
-		    <div>
-		      <img src={walk.thumbnail_url}/>
-		      <PetImages pets={walk.pets}/>
-		      <p>{walk.notes}</p>
+		    <div className="walk-header">
+		      <h1>Featured Walks</h1>
+		    </div>
+        <hr />
+        <div className="walk-container-1">
+          <div className="walk-box-1">
+    		    <p>Dist.(mi.): {walk.distance}</p>
+          </div>
+          <div className="walk-box-2">
+    		    <ActionsCounts action_counts={walk.action_counts}/>
+          </div>
+        </div>
+        <div className="container-box">
+          <img src={walk.thumbnail_url}/>
+        </div>
+        <hr/>
+        <div className="walk-container-2">
+          <div className="container-2-box-1">
+            <PetImages pets={walk.pets}/>
+          </div>
+          <div className="container-2-box-2">
+  		      <p>{walk.notes}</p>
+          </div>
+        </div>
+        <hr/>
+        <div>
 		      <p>{walk.start_time}</p>
 		      <p>{walk.end_time}</p>
-		      <p>Distance(Mi): {walk.distance}</p>
-		      <ActionsCounts action_counts={walk.action_counts}/>
 		      <Location location_coordinates={walk.location_coordinates}/>
 		    </div>
 	    </main>
