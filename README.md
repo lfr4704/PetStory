@@ -1,6 +1,6 @@
 ## Live application  
 
-Owners screen connected to API http://localhost:3000/owners/14/feed/
+Owners screen connected to API http://pet-story.herokuapp.com/owners/14/feed/
 
 ## in construction
 ```bash
