@@ -1,4 +1,8 @@
-## in construction 
+## Live application  
+
+Owners screen connected to API http://localhost:3000/owners/14/feed/
+
+## in construction
 ```bash
 in construciton, backend code does not live in this repository
 ```
