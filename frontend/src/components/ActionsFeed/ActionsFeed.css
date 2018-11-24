@@ -1,43 +1,9 @@
-
-/* profile picture edit */
-.pet-profile-picture {
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
-	-webkit-border-radius: 50%; /* vendor prefixed properties */
-	-moz-border-radius: 50%;
-	-ms-border-radius: 50%;
-	display: inline-block;
-	position: relative;
+.action-feed-item {
+	margin-top: 20px;
+	padding-bottom: 20px;
 }
 
-.container-1{
-	display: flex;
-	align-items: center;
-
-}
-
-.container-1 div{
-	/* border: 1px #ccc solid; */
-	padding: 0px;
-}
-
-.box-1{
-  flex: 1;
-	margin-left: 40px;
-}
-
-.box-2{
-  flex: 1;
-/* to be styled later? */
-}
-
-.box-3{
-  flex: 1;
-/* to be styled later? */
-}
-
-.box-4{
-  flex: 12;
-/* to be styled later? */
+.action-feed-action-text-container {
+	/* display: flex; */
+	margin-bottom: 10px;
 }

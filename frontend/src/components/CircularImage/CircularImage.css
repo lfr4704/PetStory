@@ -1,0 +1,13 @@
+.image-container {
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+.image-element {
+	object-fit: cover;
+	min-height: 100%;
+	min-width: 100%;
+}

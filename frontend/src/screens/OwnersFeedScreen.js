@@ -4,6 +4,11 @@ import {
   Route,
 } from 'react-router-dom';
 import OwnerFeed from '../components/OwnerFeed/OwnerFeed';
+import Navigation from '../components/Navigation/Navigation.js';
+import SideDrawer from '../components/SideDrawer/SideDrawer.js';
+import Backdrop from '../components/Backdrop/Backdrop.js';
+import ApiClient from '../ApiClient';
+
 
 class OwnersFeedScreen extends Component {
   constructor(props) {
@@ -13,34 +18,46 @@ class OwnersFeedScreen extends Component {
     };
   }
 
+  state ={
+    sideDrawerOpen: false,
+  };
+
+  drawerToggleClickHandler = () => {
+    this.setState(prevState => ({ sideDrawerOpen: !prevState.sideDrawerOpen }));
+  };
+
+  backdropClickHandler= () => {
+    this.setState({ sideDrawerOpen: false });
+  };
+
   componentDidMount() {
-    const {match} = this.props;
-    this.ownerFeedId = match.params.ownerFeedId // params is for router functionality
-    this.fetchOwnerFeed();
+    const { match } = this.props;
+    this.ownerId = match.params.ownerId; // params is for router functionality
+    ApiClient.getOwnerFeed(this.ownerId, this.onGetOwnerFeedSuccess);
   }
 
-  fetchOwnerFeed() {
-    const url = `http://localhost:8000/api/owners/${this.ownerFeedId}/feed/`;
-
-    fetch(url) // eslint-disable-line no-undef
-      .then(response => response.json())
-      .then((ownerFeedJson) => {
-      console.log(ownerFeedJson)
-        this.setState({
-          ownerFeed: ownerFeedJson,
-
-        });
-      })
-
-      .catch(error => console.log('fetch error', error));
+  onGetOwnerFeedSuccess = (ownerFeedJson) => {
+    this.setState({ ownerFeed: ownerFeedJson });
   }
 
   render() {
-   const { ownerFeed } = this.state;
+    let backdrop;
+
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />;
+    }
+
+    const { ownerFeed } = this.state;
+
+    // TODO should nav be global?
+    // <Navigation drawerClickHandler={this.drawerToggleClickHandler} />
+    // <SideDrawer show={this.state.sideDrawerOpen} />
+    // {backdrop}
+
     return (
-        <div>
-          <OwnerFeed ownerFeed={ownerFeed} />
-        </div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <OwnerFeed ownerFeed={ownerFeed} />
+      </div>
     );
   }
 }

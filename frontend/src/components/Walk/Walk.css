@@ -1,52 +1,61 @@
-.walk-header{
-  margin-left: 40px;
+.walk-header {
+  margin-left: 20px;
+  margin-top: 55px;
+  padding: 0px;
+  margin-bottom: -20px;
 }
 
-/* profile picture edit */
-/* .walker-profile-picture {
-	width: 150px;
-	height: 150px;
-	background-color: blue;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-ms-border-radius: 50%;
-	display: inline-block;
-	position: relative;
-} */
-
-.walk-container-1{
-	display: flex;
-	align-items:center;
+.walk-actions-container {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* border: 1px #333 dashed; */
 }
 
 .walk-container-2{
 	display: flex;
 	align-items:center;
+  margin-left: -25px;
 }
 
-.walk-container-1 div, .walk-container-2 div{
-	/* border: 1px #ccc solid; */
+.walk-actions-container div, .walk-container-2 div {
+	/* border: 1px #ccc dotted; */
 	padding: 0px;
 }
 
-.walk-box-1{
+.walk-container-box-icon {
   flex: 1;
-	margin-left: 40px;
+  text-align: right;
 }
 
-.walk-box-2{
-  flex: 8;
+.walk-container-box-text {
+  flex: 1;
+}
+
+.walk-container-box-value {
+  flex: 1;
+}
+
+.walk-container-box-2 {
+  flex: 24;
 	padding: 0px;
 }
 
-.container-box{
-	margin-left: 40px;
+.container-box {
+	margin-left: 20px;
 }
 
-.container-2-box-1{
+.container-2-box-1 {
   flex: 1;
 }
-.container-2-box-2{
+.container-2-box-2 {
 	flex: 12;
+}
+
+@media(max-width: 768px)
+{
+	.actions-text {
+		display: none;
+	}
 }

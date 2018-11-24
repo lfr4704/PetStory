@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+body
+{
+	background-color: red;
+	margin: 0;
+	padding:0;
+	font-family: 'Comfortaa', cursive, sans-serif;
+}
+
+nav
+{
+	width: 100%;
+	background: #00316b;
+}
+
+ul 
+{
+	width: 80%; 
+	margin: 0 auto;
+	padding: 0;
+
+}
+ul li 
+{
+	list-style: none; /*removes bullets from list*/
+	display: inline-block;/*positions list items in horizontal mode*/
+	padding: 20px;
+}
+
+ul li:hover
+{
+	background:#e91e63;
+}
+ul li a 
+{
+	color:#fff;
+	text-decoration: none; /*removes underline from link*/
+}
+
+.toggle{
+	width:100%;
+	padding:10px 20px;
+	background: 001f44;
+	text-align: right;
+	box-sizing: border-box;
+	color:#fff;/*this chnages to color white for menu bar icon*/
+	font-size: 30px;
+	display: none;
+}
+
+@media (max-width: 768px)
+{
+	.toggle
+	{
+		display: block;
+		background-color: red;
+	}
+	ul
+	{
+		width:100%;
+	}
+	ul li 
+	{
+		display: block;
+		text-align: center;
+	}
+}

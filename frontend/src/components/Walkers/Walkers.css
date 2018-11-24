@@ -1,63 +1,104 @@
 
 .walker-header{
-	display: inline;
-	margin-left: 40px;
+	width: 300px;
+  height: 20px;
 }
 
-.icon{
-	display: inline;
-	float:right;
-	margin-right:40px;
+.walker-header-container {
+  /* border: 1px #ccc solid; */
+  display: flex;
+  align-items:flex-end;
+  margin-top: 55px;
+}
+
+.walker-header-edit {
+	flex: 14;
+	padding: 0px;
+  text-align: right;
+}
+.walker-header-icon {
+	flex: 1;
+	padding: 0px;
 }
 
 /* profile picture edit */
 .walker-profile-picture {
 	width: 150px;
 	height: 150px;
-	background-color: blue;
 	border-radius: 50%;
 	-webkit-border-radius: 50%; /* vendor prefixed properties */
 	-moz-border-radius: 50%;
 	-ms-border-radius: 50%;
 	display: inline-block;
 	position: relative;
+	margin-left: -10px;
 }
 
-.walker-container-1{
+.walker-profile-container {
 	display: flex;
 	align-items: center;
+	border: 1px #ccc solid;
+	background-color: #ccc;
+	border-radius: 25px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
-.walker-container-2{
+.walker-body-container {
 	display:flex;
 	flex-direction: column;
+	border: 1px #ccc solid;
+	background-color: #ccc;
+	border-radius: 25px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
-.walker-container-3{
-	margin-left: 40px;
+.walker-calendar-container {
+	display: flex;
+	align-items: center;
+	border: 1px #ccc solid;
+	background-color: #ccc;
+	border-radius: 25px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
-.walker-container-4{
-	margin-left: 40px;
-}
-
-.walker-container-1 div, .walker-container-2 div, .walker-container-4 div{
-	/* border: 1px #ccc solid; */
+.walker-header-container div, .walker-profile-container div,
+.walker-body-container div, .walker-calendar-container div,
+.walker-featured-container {
+	/* border: 1px #000000 solid; */
 	padding: 10px;
 }
 
-.walker-box-1{
-	margin-left: 40px;
+.walker-profile-photo-box {
+	flex: 1;
 }
 
-.walker-box-2{
-	margin-left: 10px;
+.walker-profile-details-box {
+	flex: 11;
 }
 
-.container-2-box{
-	margin-left: 40px;
+.walker-body-box {
+	flex: 1;
+}
+
+.walker-body-services-box {
+	flex: 1;
+	margin-left: -10px;
 }
 
 h2 {
 	text-decoration: underline;
+}
+
+@media(max-width: 768px)
+{
+	.edit-walker {
+		display: none;
+	}
+
+	.walker-header-edit {
+		display: none;
+	}
 }

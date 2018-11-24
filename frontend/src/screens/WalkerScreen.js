@@ -4,7 +4,9 @@ import {
   Route,
 } from 'react-router-dom';
 import Walkers from '../components/Walkers/Walkers';
-
+import Navigation from '../components/Navigation/Navigation.js';
+import SideDrawer from '../components/SideDrawer/SideDrawer.js';
+import Backdrop from '../components/Backdrop/Backdrop.js';
 
 class WalkerScreen extends Component {
   constructor(props) {
@@ -14,9 +16,21 @@ class WalkerScreen extends Component {
     };
   }
 
+  state ={
+    sideDrawerOpen: false,
+  };
+
+  drawerToggleClickHandler = () => {
+    this.setState(prevState => ({ sideDrawerOpen: !prevState.sideDrawerOpen }));
+  };
+
+  backdropClickHandler= () => {
+    this.setState({ sideDrawerOpen: false });
+  };
+
   componentDidMount() {
-    const {match} = this.props;
-    this.walkerId = match.params.walkerId // params is for router functionality
+    const { match } = this.props;
+    this.walkerId = match.params.walkerId; // params is for router functionality
     this.fetchWalker();
   }
 
@@ -26,7 +40,7 @@ class WalkerScreen extends Component {
     fetch(url) // eslint-disable-line no-undef
       .then(response => response.json())
       .then((walkerJson) => {
-      console.log(walkerJson)
+        console.log(walkerJson);
         this.setState({
           walker: walkerJson,
         });
@@ -37,11 +51,20 @@ class WalkerScreen extends Component {
 
 
   render() {
+    let backdrop;
+
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler} />;
+    }
+
     const { walker } = this.state;
     return (
-        <div>
-          <Walkers walker={walker} />
-        </div>
+      <div>
+        <Navigation drawerClickHandler={this.drawerToggleClickHandler} />
+        <SideDrawer show={this.state.sideDrawerOpen} />
+        {backdrop}
+        <Walkers walker={walker} />
+      </div>
     );
   }
 }

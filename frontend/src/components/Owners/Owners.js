@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Owners.css';
+import Ionicon from 'react-ionicons';
 import Pets from '../Pets/Pets';
 
-
-class Owners extends React.Component { // eslint-disable-line react/prefer-stateless-function
+class Owners extends React.Component {
   static propTypes = {
     owner: PropTypes.object,
   };
-
 
   render() {
     const { owner } = this.props;
@@ -18,23 +17,28 @@ class Owners extends React.Component { // eslint-disable-line react/prefer-state
 
     return (
       <main>
-        <div className="owner-header">
-          <h1>{owner.name}</h1>
-        </div>
-        <div className="owner-container-1">
-          <div className="owner-box-1">
-            <h2 className="owner-sub-header">Owner Details</h2>
+        <div className="owner-header-container">
+          <div className="owner-header-title">
+            <h1 className="owner-header">Owner Details</h1>
           </div>
-          <div className="owner-box-2">
-            <h5 className="owner-icon">Edit</h5>
+          <div className="owner-header-icons">
+            <Ionicon icon="md-call" fontSize="25px" color="black" />
+            <Ionicon icon="md-text" fontSize="25px" color="black" />
+            <Ionicon icon="md-mail" fontSize="25px" color="black" />
+          </div>
+          <div className="owner-header-edit">
+            <h4 className="edit-owner">Edit</h4>
+          </div>
+          <div className="owner-header-right-icon">
+            <Ionicon icon="md-create" fontSize="25px" color="black" />
           </div>
         </div>
-        <div className="container-box">
-          <p><strong>Name:</strong> {owner.name}</p>
-          <p><strong>Phone:</strong> {owner.phone}</p>
-          <p><strong>Email:</strong> {owner.email}</p>
-          <p><strong>Address:</strong> {owner.address}</p>
-          <p><strong>Notes:</strong> {owner.info}</p>
+        <div className="owner-details-container">
+          <p>{`Name: ${owner.name}`}</p>
+          <p>{`Phone: ${owner.phone}`}</p>
+          <p>{`Email: ${owner.email}`}</p>
+          <p>{`Address: ${owner.address}`}</p>
+          <p>{`Notes: ${owner.info}`}</p>
         </div>
         <div>
           <Pets pets={owner.pets} />

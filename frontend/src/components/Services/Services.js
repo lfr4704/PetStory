@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const serviceDisplayNames = { //renames values in object for user views
+const serviceDisplayNames = { // renames values in object for user views
   boarding: 'Overnight boarding',
   walking: 'Daily walks',
 };
@@ -10,7 +10,7 @@ const serviceDisplayNames = { //renames values in object for user views
 
 // stateless component
 const Services = ({ services }) => {
-  const servicesHtml = services.map(service => (//this is a for each loop for every object in stored in the object values
+  const servicesHtml = services.map(service => (
     <div>
       <p>{serviceDisplayNames[service.type]}</p>
       <p>Rate: ${service.rate}</p>

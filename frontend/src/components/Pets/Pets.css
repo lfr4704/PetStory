@@ -1,13 +1,8 @@
 
-.pets-header{
-	display: inline;
-	margin-left: 40px;
-}
-
-.icon{
-	display: inline;
-	float:right;
-	margin-right:40px;
+.pets-subheader {
+	width: 300px;
+	margin: 0px;
+	padding: 0px;
 }
 
 /* profile picture edit */
@@ -21,27 +16,78 @@
 	-ms-border-radius: 50%;
 	display: inline-block;
 	position: relative;
+	margin: 0px;
+	padding: 0px;
 }
 
-.pets-container-1{
+.pets-profile-container {
 	display: flex;
 	align-items: center;
+	border: 1px #ccc solid;
+	background-color: #ccc;
+	border-radius: 25px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
-.pets-container-2{
+.pets-body-container {
 	display:flex;
 	flex-direction: column;
+	border: 1px #ccc solid;
+	background-color: #ccc;
+	border-radius: 25px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
-.pets-container-1 div, .pets-container-2 div{
+.pets-subheader-container {
+	display: flex;
+  align-items:flex-end;
+}
+
+.pets-profile-container div, .pets-body-container div, .pets-subheader-container div {
 	/* border: 1px #ccc solid; */
-	padding: 10px;
+	padding-left: 10px;
 }
 
-.pets-box-1{
-	margin-left: 40px;
+.pets-subheader-title {
+	margin-left: 0px;
 }
 
-.container-2-box{
-	margin-left: 40px;
+.pets-subheader-edit {
+	flex: 14;
+	padding: 0px;
+  text-align: right;
+}
+.pets-subheader-icon {
+	flex: 1;
+	padding: 0px;
+}
+
+.pets-profile-photo-box {
+	flex: 1;
+}
+
+.pets-profile-details-box {
+	flex: 11;
+}
+
+.pets-body-box {
+	flex: 1;
+}
+
+h4 {
+  padding: 5px;
+  margin: 0px;
+}
+
+@media(max-width: 768px)
+{
+	.edit-pet {
+		display: none;
+	}
+
+	.pets-subheader-edit {
+		display: none;
+	}
 }

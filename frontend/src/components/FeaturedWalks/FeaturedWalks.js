@@ -1,22 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './FeaturedWalks.css';
 
 
 // stateless component
 const FeaturedWalks = ({ featuredWalks }) => {
   const featuredWalksHtml = featuredWalks.map(featuredWalk => (
-    <div>
-    	<div>
-	      <img src={featuredWalk.thumbnail_url}/>
+    <div className="container">
+      <div className="subheader">
+        <h1 className="subheader-title">Featured Walks</h1>
       </div>
-      <div>
-      	<p>date: {featuredWalk.date}</p>
+      <div className="featured-walk-container">
+        <div className="featured-walk-box">
+          <img src={featuredWalk.thumbnail_url} />
+        </div>
+        <div className="featured-walk-box">
+          <img src={featuredWalk.thumbnail_url} />
+        </div>
+        <div className="featured-walk-box">
+          <img src={featuredWalk.thumbnail_url} />
+        </div>
+      </div>
+      <div className="date-label">
+        <p>{`date: ${featuredWalk.date}`}</p>
       </div>
     </div>
   ));
   return (
     <div>
-      <h2>Featured Walks</h2>
       {featuredWalksHtml}
     </div>
   );

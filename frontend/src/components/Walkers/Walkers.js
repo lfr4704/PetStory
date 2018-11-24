@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Walkers.css';
+import Ionicon from 'react-ionicons';
 import Services from '../Services/Services';
 import Pets from '../Pets/Pets';
 import FeaturedWalks from '../FeaturedWalks/FeaturedWalks';
@@ -15,50 +16,56 @@ class Walkers extends React.Component { // eslint-disable-line react/prefer-stat
     if (!walker) {
       return null;
     }
-
     return (
       <main>
-        <div>
-          <h1 className="walker-header">Walker Details</h1>
-          <h5 className="icon">Edit</h5>
+        <div className="walker-header-container">
+          <div className="walker-header-title">
+            <h1 className="walker-header">Walker Details</h1>
+          </div>
+          <div className="walker-header-edit">
+            <h4 className="edit-walker">Edit</h4>
+          </div>
+          <div className="walker-header-right-icon">
+            <Ionicon icon="md-create" fontSize="25px" color="black" />
+          </div>
         </div>
 
-        <div className="walker-container-1">
-          <div className="walker-box-1">
+        <div className="walker-profile-container">
+          <div className="walker-profile-photo-box">
             <img className="walker-profile-picture" src={walker.image_url} />
           </div>
-          <div className="walker-box-2">
+          <div className="walker-profile-details-box">
             <p>{`${walker.first_name} ${walker.last_name}`} </p>
             <p>{walker.phone}</p>
             <p>{walker.email}</p>
           </div>
         </div>
-
-        <div className="walker-container-2">
-          <div className="container-2-box">
+        <br />
+        <div className="walker-body-container">
+          <div className="walker-body-box">
             <h2>Location</h2>
-              <p>{walker.location}</p>
+            <p>{walker.location}</p>
           </div>
-          <div className="container-2-box">
+          <div className="walker-body-box">
             <h2>About</h2>
-              <p>{walker.about}</p>
+            <p>{walker.about}</p>
           </div>
-          <div className="container-2-box">
+          <div className="walker-body-services-box">
             <Services services={walker.services} />
           </div>
         </div>
 
-        <div className="walker-container-3">
+        <div className="walker-featured-container">
           <div>
             <FeaturedWalks featuredWalks={walker.featured_walks} />
           </div>
         </div>
 
         <div>
-          <Pets pets={walker.pets}/>
+          <Pets pets={walker.pets} />
         </div>
-
-        <div className="walker-container-4">
+        <br />
+        <div className="walker-calendar-container">
           <div>
             <h2>Calendar</h2>
             <p>{walker.calendar}</p>

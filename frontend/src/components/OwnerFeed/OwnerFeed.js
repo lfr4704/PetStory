@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import WalkerFeed from '../WalkerFeed/WalkerFeed';
+import WalkerDetailsBanner from '../WalkerDetailsBanner/WalkerDetailsBanner';
 import ActionsFeed from '../ActionsFeed/ActionsFeed';
 
 
@@ -15,15 +15,11 @@ class OwnerFeed extends React.Component { // eslint-disable-line react/prefer-st
       return null;
     }
     return (
-      <main>
-        <div>
-          <WalkerFeed walkerFeed={ownerFeed.walker} />
-        </div>
-        <hr />
-        <div>
-          <ActionsFeed actionsFeed={ownerFeed.actions} />
-        </div>
-      </main>
+      <div style={{ alignItems: 'center', display: 'flex', flexDirection: 'column' }}>
+        <h1 style={{ marginBottom: '20px' }}>PetStory</h1>
+        <WalkerDetailsBanner walkerFeed={ownerFeed.walker} />
+        <ActionsFeed actionsFeed={ownerFeed.actions} />
+      </div>
     );
   }
 }

@@ -1,0 +1,18 @@
+.walker-details-banner {
+  display: flex;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.walker-details-banner-left-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.icon-container {
+  margin-left: 10px;
+}

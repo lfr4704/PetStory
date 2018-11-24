@@ -3,16 +3,16 @@ import {
   BrowserRouter,
   Route,
 } from 'react-router-dom';
-import Owners from '../components/Owners/Owners';
+import OwnerForm from '../components/OwnerForm/OwnerForm';
 import Navigation from '../components/Navigation/Navigation.js';
 import SideDrawer from '../components/SideDrawer/SideDrawer.js';
 import Backdrop from '../components/Backdrop/Backdrop.js';
 
-class OwnersScreen extends Component {
+class OwnersFormScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      owner: null,
+      ownerFeed: null,
     };
   }
 
@@ -28,26 +28,6 @@ class OwnersScreen extends Component {
     this.setState({ sideDrawerOpen: false });
   };
 
-  componentDidMount() {
-    const { match } = this.props;
-    this.ownerId = match.params.ownerId; // params is for router functionality
-    this.fetchOwner();
-  }
-
-  fetchOwner() {
-    const url = `http://localhost:8000/api/owners/${this.ownerId}/owner-details-form/`;
-
-    fetch(url) // eslint-disable-line no-undef
-      .then(response => response.json())
-      .then((ownerJson) => {
-        console.log(ownerJson);
-        this.setState({
-          owner: ownerJson,
-        });
-      })
-
-      .catch(error => console.log('fetch error', error));
-  }
 
   render() {
     let backdrop;
@@ -55,17 +35,15 @@ class OwnersScreen extends Component {
     if (this.state.sideDrawerOpen) {
       backdrop = <Backdrop click={this.backdropClickHandler} />;
     }
-
-    const { owner } = this.state;
     return (
       <div>
         <Navigation drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
-        <Owners owner={owner} />
+        <OwnerForm />
       </div>
     );
   }
 }
 
-export default OwnersScreen;
+export default OwnersFormScreen;

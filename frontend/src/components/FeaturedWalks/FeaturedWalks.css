@@ -1,0 +1,43 @@
+.featured-walk-container {
+  display:inline-flex;
+  align-items:center;
+}
+
+.featured-walk-box {
+  flex: 1;
+}
+
+/* FYI you probably shouldn't do this globally */
+/* img {
+  width: 90%;
+  padding: 10px;
+} */
+
+.subheader {
+	margin: 0px;
+	padding: 0px;
+}
+
+.subheader-title {
+	margin: 0px;
+
+}
+
+.container {
+  margin: 0px;
+  padding: 0px;
+}
+
+.date-label {
+  text-align: center;
+  width: 90%;
+}
+
+
+@media(max-width: 768px)
+{
+  .featured-walk-container {
+    display:inline-flex;
+    flex-direction: column;
+  }
+}
